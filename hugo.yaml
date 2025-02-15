@@ -1,0 +1,4 @@
+baseURL: 'https://juliencorre.github.io/histoires/'
+languageCode: 'fr-fr'
+title: 'Mes Histoires'
+theme: 'paper'  # ou le thème de votre choix
