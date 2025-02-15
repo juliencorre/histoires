@@ -1,4 +1,3 @@
-# Sample workflow for building and deploying a Hugo site to GitHub Pages
 name: Deploy Hugo site to Pages
 
 on:
@@ -32,7 +31,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.141.0
+      HUGO_VERSION: "0.141.0"
     steps:
       - name: Install Hugo CLI
         run: |
@@ -52,14 +51,14 @@ jobs:
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
         env:
-          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
-          TZ: America/Los_Angeles
+          HUGO_ENV: production
         run: |
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "https://juliencorre.github.io/histoires/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
