@@ -1,4 +1,20 @@
 baseURL = 'https://juliencorre.github.io/histoires/'
 languageCode = 'fr-fr'
 title = 'Mes Histoires'
-theme = 'ananke'
+# theme = 'ananke'
+
+# Novela settings
+theme = "github.com/forestryio/hugo-theme-novela"
+
+paginate = 6
+
+[social]
+twitter= "#"
+github= "#"
+linkedin= "#"
+instagram = "#"
+dribbble = "#"
+youtube = "#"
+
+[taxonomies]
+author = "Julien Corre"
