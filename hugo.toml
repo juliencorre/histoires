@@ -1,8 +1,6 @@
 baseURL = 'https://juliencorre.github.io/histoires/'
 languageCode = 'fr-fr'
 title = 'Mes Histoires'
-# theme = 'ananke'
+theme = 'ananke'
 
-# Novela settings
-theme = "paper"
 
